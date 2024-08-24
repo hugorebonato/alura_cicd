@@ -2,9 +2,9 @@ name: Go
 
 on:
   push:
-    branches: [ '*' ]
+    branches: [ 'Projeto_inicial' ]
   pull_request:
-    branches: [ '*' ]
+    branches: [ 'Projeto_inicial' ]
 
 jobs:
 
@@ -18,8 +18,8 @@ jobs:
       DBNAME: root
     strategy:
       matrix:
-        go_version: ['1.18', '1.17', '>=1.18']
-        os: ['ubuntu-latest', 'ubuntu-18.04']
+        go_version: ['>=1.18']
+        os: ['ubuntu-latest']
     steps:
     - uses: actions/checkout@v3
 
