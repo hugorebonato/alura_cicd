@@ -25,7 +25,8 @@ jobs:
       with:
         instance_name: 'api-go'
         zone: 'us-central1-f'
-        ssh_private_key: '${{ secrets.SSH_PRIVATE_KEY }}'        
+        ssh_private_key: '${{ secrets.SSH_PRIVATE_KEY }}'   
+        user: 'hugorebonato'
         script: |
           export HOST=${{ secrets.DBHOST }}
           export USER=${{ secrets.DBUSER }}
