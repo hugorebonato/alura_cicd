@@ -67,6 +67,6 @@ jobs:
 
   Deploy_GPC_CloudRun:
     needs: docker
-    uses: ./.github/workflows/GCP_CloudRun.yml
+    uses: ./.github/workflows/GCP-containers.yml
     secrets: inherit
   
