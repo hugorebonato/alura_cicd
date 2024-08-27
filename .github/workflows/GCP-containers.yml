@@ -1,1 +1,10 @@
+name: Entrega Contínua com GCP
 
+on:
+  workflow_call:
+
+jobs:
+
+  GCP_CloudRun:
+    runs-on: ubuntu-latest
+    steps:
