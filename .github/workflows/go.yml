@@ -55,10 +55,10 @@ jobs:
         path: main
 
 
-  docker:
-    needs: build
-    uses: ./.github/workflows/Docker.yml
-    secrets: inherit
+ # docker:
+  #  needs: build
+   # uses: ./.github/workflows/Docker.yml
+   # secrets: inherit
 
   #Deploy_gcp:
    # needs: build
@@ -66,7 +66,7 @@ jobs:
    # secrets: inherit
 
   Deploy_GPC_CloudRun:
-    needs: docker
+#    needs: docker
     uses: ./.github/workflows/GCP-containers.yml
     secrets: inherit
   
