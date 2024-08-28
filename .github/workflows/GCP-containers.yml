@@ -1,8 +1,8 @@
 name: Entrega Contínua com GCP
 
 on:
-  workflow_call:
-
+  push:
+    branches: [Projeto_inicial]
 jobs:
 
   GCP_CloudRun:
