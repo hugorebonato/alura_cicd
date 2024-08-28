@@ -3,12 +3,14 @@ name: Entrega Contínua com GCP
 on:
   push:
     branches: [Projeto_inicial]
+    
 jobs:
-
-  GCP_CloudRun:
+  deploy:
+    name: GCP_CloudRun
     runs-on: ubuntu-latest
+    environment: prd
     env:
-      IMAGE_NAME: gcr.io/${{ secrets.GOOGLE_PROJECT }}
+      IMAGE_NAME: gcr.io/${{ secrets.GOOGLE_PROJECT }}/imagem:latest
     steps:
       # Git checkout
       - name: Checkout
